@@ -9,6 +9,8 @@
 
 ---
 
+![DarkCORE teaser](assets/teaser_full.png)
+
 ## 📖 Introduction
 
 Object detectors trained on high-quality datasets often suffer severe performance degradation under low-light conditions, mainly due to amplified noise and distorted textures introduced by conventional enhancement methods. Most existing approaches focus primarily on brightness and contrast adjustment, which are designed for **human visual perception** and often fail to meet the requirements of downstream detection tasks. In addition, their denoising techniques rely on single-branch constraints and struggle to balance noise suppression with detail preservation under complex lighting conditions.
