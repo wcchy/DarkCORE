@@ -83,16 +83,6 @@ Object detectors trained on high-quality datasets often suffer severe performanc
 | EMV-YOLO | 69.7 | 70.6 | **93.2** | 91.3 | 71.9 | 68.4 | 62.5 | 74.0 | <ins>75.2</ins> |
 | **DarkCORE (ours)** | **70.0** | **70.9** | 89.8 | 91.4 | **72.0** | 70.8 | 67.7 | **77.2** | **76.2** |
 
-### Generalization to DETR (ExDark, mAP50 %)
-
-| Method | mAP50 |
-|---|---|
-| DETR | 74.7 |
-| PairLIE + DETR | 73.3 |
-| IAT | <ins>75.5</ins> |
-| EMV-YOLO | 74.3 |
-| **DarkCORE (ours)** | **76.1** |
-
 ### Efficiency (enhancement module only, YOLOv3 detector fixed)
 
 | Method | Parameters | Runtime (ms) | FLOPs (G) |
