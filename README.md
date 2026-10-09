@@ -5,7 +5,7 @@
 
 > **[DarkCORE: Efficient low-light object detection via collaborative reflectance denoising and object-oriented feature enhancement](https://doi.org/10.1016/j.eswa.2026.132424)**
 > Xin Feng, Jie Wang, Yunlong Wang, Junxian Zeng, Di Ming
-> *Expert Systems With Applications (ESWA), 2026* | [Paper (PDF)](DarkCORE-eswa.pdf) | [DOI](https://doi.org/10.1016/j.eswa.2026.132424)
+> *Expert Systems With Applications (ESWA), 2026* | [DOI](https://doi.org/10.1016/j.eswa.2026.132424)
 
 ---
 
@@ -109,7 +109,21 @@ Object detectors trained on high-quality datasets often suffer severe performanc
 
 ### Visual Results
 
+Visual comparison of enhancement and detection results on **ExDark** (last column: ours):
+
 ![Visual comparison on ExDark](assets/results_vis.png)
+
+Face detection results on **UG2+ DarkFace** (GT vs. DarkCORE):
+
+![Visualization on DarkFace](assets/darkface_vis.png)
+
+Detection results on **LOD** compared with HVI, IAT and EMV-YOLO:
+
+![Visualization on LOD](assets/lod_vis.png)
+
+Object-oriented feature enhancement — input, enhanced output, and the difference map:
+
+![Feature enhancement visualization](assets/enhance_vis.png)
 
 ## 🛠️ Installation
 
