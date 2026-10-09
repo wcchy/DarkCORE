@@ -103,17 +103,9 @@ Visual comparison of enhancement and detection results on **ExDark** (last colum
 
 ![Visual comparison on ExDark](assets/results_vis.png)
 
-Face detection results on **UG2+ DarkFace** (GT vs. DarkCORE):
-
-![Visualization on DarkFace](assets/darkface_vis.png)
-
 Detection results on **LOD** compared with HVI, IAT and EMV-YOLO:
 
 ![Visualization on LOD](assets/lod_vis.png)
-
-Object-oriented feature enhancement — input, enhanced output, and the difference map:
-
-![Feature enhancement visualization](assets/enhance_vis.png)
 
 ## 🛠️ Installation
 
