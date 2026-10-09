@@ -32,43 +32,53 @@ Object detectors trained on high-quality datasets often suffer severe performanc
 
 ### ExDark (mAP50 %, YOLOv3 detector)
 
-| Type | Method | Bicycle | Boat | Bottle | Bus | Car | Cat | Chair | Cup | Dog | Motorbike | People | Table | **mAP50** |
-|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|
-| Baseline | YOLOv3 | 79.8 | 75.3 | 78.1 | 92.3 | 83.0 | 68.0 | 69.0 | 79.0 | 78.0 | 77.3 | 81.5 | 55.5 | 76.4 |
-| Two-stage | MBLLEN (BMVC'18) + YOLOv3 | 82.2 | 76.7 | 76.5 | 92.5 | 83.1 | 72.4 | 71.5 | 77.3 | 78.5 | 74.5 | 80.8 | 55.6 | 76.8 |
-| Two-stage | KinD (MM'19) + YOLOv3 | 80.9 | 75.0 | 75.8 | 93.3 | 82.4 | 69.4 | 69.2 | 79.0 | 76.9 | 76.3 | 79.6 | 55.4 | 76.1 |
-| Two-stage | Zero-DCE (CVPR'20) + YOLOv3 | 84.1 | 77.6 | 78.3 | 93.1 | 83.7 | 70.3 | 69.8 | 77.6 | 77.4 | 76.3 | 81.0 | 53.6 | 76.9 |
-| Two-stage | Retinexformer (ICCV'23) + YOLOv3 | 82.0 | 80.1 | 80.9 | 91.3 | 83.1 | 70.8 | 70.3 | 76.9 | 75.8 | 75.4 | 80.8 | 57.8 | 77.1 |
-| Two-stage | PairLIE (CVPR'23) + YOLOv3 | 82.5 | 76.7 | 76.4 | 91.6 | 82.9 | 71.0 | 70.0 | 76.9 | 78.9 | 72.6 | 79.9 | 55.3 | 76.2 |
-| Two-stage | HVI (CVPR'25) + YOLOv3 | 79.7 | 75.8 | 75.1 | 91.8 | 82.3 | 69.8 | 72.0 | 74.8 | 77.4 | 77.2 | 79.5 | 54.3 | 76.1 |
-| Single-stage | MAET (ICCV'21) | 83.1 | 78.5 | 75.6 | 92.9 | 83.1 | 73.4 | 71.3 | 79.0 | 79.8 | 77.2 | 81.1 | 57.0 | 77.7 |
-| Single-stage | IAT (BMVC'22) | 79.8 | 76.9 | 78.6 | 92.5 | 83.8 | 73.6 | 72.4 | 78.6 | 79.0 | 79.0 | 81.1 | 57.7 | 77.8 |
-| Single-stage | DENet (ACCV'22) | 80.9 | 79.2 | 80.1 | 90.7 | 84.5 | 70.7 | 72.0 | 79.3 | 80.1 | 76.7 | 82.4 | 58.0 | 77.9 |
-| Single-stage | PE-YOLO (PRL'23) | 84.7 | 79.2 | 79.3 | 92.5 | 83.9 | 71.5 | 71.7 | 79.7 | 79.7 | 77.3 | 81.8 | 55.3 | 78.0 |
-| Single-stage | DAI-Net (AAAI'24) | 83.8 | 75.8 | 75.1 | 94.2 | 84.1 | 74.9 | 73.1 | 79.2 | 82.2 | 76.4 | 80.7 | 59.8 | 78.3 |
-| Single-stage | EMV-YOLO (ESWA'24) | 82.8 | 79.7 | 79.8 | 94.1 | 84.7 | 74.3 | 74.1 | 83.1 | 82.7 | 78.1 | 83.6 | 59.3 | <ins>79.7</ins> |
-| Single-stage | **DarkCORE (ours)** | 84.2 | 80.1 | 77.4 | 93.1 | 84.4 | **75.2** | **76.5** | 81.0 | **84.4** | **81.8** | **84.0** | **61.1** | **80.3** |
+<table>
+<thead>
+<tr><th>Type</th><th>Method</th><th>Bicycle</th><th>Boat</th><th>Bottle</th><th>Bus</th><th>Car</th><th>Cat</th><th>Chair</th><th>Cup</th><th>Dog</th><th>Motorbike</th><th>People</th><th>Table</th><th>mAP50</th></tr>
+</thead>
+<tbody>
+<tr><td>Baseline</td><td>YOLOv3</td><td>79.8</td><td>75.3</td><td>78.1</td><td>92.3</td><td>83.0</td><td>68.0</td><td>69.0</td><td>79.0</td><td>78.0</td><td>77.3</td><td>81.5</td><td>55.5</td><td>76.4</td></tr>
+<tr><td rowspan="6">Two-stage</td><td>MBLLEN (BMVC'18) + YOLOv3</td><td>82.2</td><td>76.7</td><td>76.5</td><td>92.5</td><td>83.1</td><td>72.4</td><td>71.5</td><td>77.3</td><td>78.5</td><td>74.5</td><td>80.8</td><td>55.6</td><td>76.8</td></tr>
+<tr><td>KinD (MM'19) + YOLOv3</td><td>80.9</td><td>75.0</td><td>75.8</td><td>93.3</td><td>82.4</td><td>69.4</td><td>69.2</td><td>79.0</td><td>76.9</td><td>76.3</td><td>79.6</td><td>55.4</td><td>76.1</td></tr>
+<tr><td>Zero-DCE (CVPR'20) + YOLOv3</td><td>84.1</td><td>77.6</td><td>78.3</td><td>93.1</td><td>83.7</td><td>70.3</td><td>69.8</td><td>77.6</td><td>77.4</td><td>76.3</td><td>81.0</td><td>53.6</td><td>76.9</td></tr>
+<tr><td>Retinexformer (ICCV'23) + YOLOv3</td><td>82.0</td><td>80.1</td><td>80.9</td><td>91.3</td><td>83.1</td><td>70.8</td><td>70.3</td><td>76.9</td><td>75.8</td><td>75.4</td><td>80.8</td><td>57.8</td><td>77.1</td></tr>
+<tr><td>PairLIE (CVPR'23) + YOLOv3</td><td>82.5</td><td>76.7</td><td>76.4</td><td>91.6</td><td>82.9</td><td>71.0</td><td>70.0</td><td>76.9</td><td>78.9</td><td>72.6</td><td>79.9</td><td>55.3</td><td>76.2</td></tr>
+<tr><td>HVI (CVPR'25) + YOLOv3</td><td>79.7</td><td>75.8</td><td>75.1</td><td>91.8</td><td>82.3</td><td>69.8</td><td>72.0</td><td>74.8</td><td>77.4</td><td>77.2</td><td>79.5</td><td>54.3</td><td>76.1</td></tr>
+<tr><td rowspan="7">Single-stage</td><td>MAET (ICCV'21)</td><td>83.1</td><td>78.5</td><td>75.6</td><td>92.9</td><td>83.1</td><td>73.4</td><td>71.3</td><td>79.0</td><td>79.8</td><td>77.2</td><td>81.1</td><td>57.0</td><td>77.7</td></tr>
+<tr><td>IAT (BMVC'22)</td><td>79.8</td><td>76.9</td><td>78.6</td><td>92.5</td><td>83.8</td><td>73.6</td><td>72.4</td><td>78.6</td><td>79.0</td><td>79.0</td><td>81.1</td><td>57.7</td><td>77.8</td></tr>
+<tr><td>DENet (ACCV'22)</td><td>80.9</td><td>79.2</td><td>80.1</td><td>90.7</td><td>84.5</td><td>70.7</td><td>72.0</td><td>79.3</td><td>80.1</td><td>76.7</td><td>82.4</td><td>58.0</td><td>77.9</td></tr>
+<tr><td>PE-YOLO (PRL'23)</td><td>84.7</td><td>79.2</td><td>79.3</td><td>92.5</td><td>83.9</td><td>71.5</td><td>71.7</td><td>79.7</td><td>79.7</td><td>77.3</td><td>81.8</td><td>55.3</td><td>78.0</td></tr>
+<tr><td>DAI-Net (AAAI'24)</td><td>83.8</td><td>75.8</td><td>75.1</td><td>94.2</td><td>84.1</td><td>74.9</td><td>73.1</td><td>79.2</td><td>82.2</td><td>76.4</td><td>80.7</td><td>59.8</td><td>78.3</td></tr>
+<tr><td>EMV-YOLO (ESWA'24)</td><td>82.8</td><td>79.7</td><td>79.8</td><td>94.1</td><td>84.7</td><td>74.3</td><td>74.1</td><td>83.1</td><td>82.7</td><td>78.1</td><td>83.6</td><td>59.3</td><td><ins>79.7</ins></td></tr>
+<tr><td><b>DarkCORE (ours)</b></td><td>84.2</td><td>80.1</td><td>77.4</td><td>93.1</td><td>84.4</td><td><b>75.2</b></td><td><b>76.5</b></td><td>81.0</td><td><b>84.4</b></td><td><b>81.8</b></td><td><b>84.0</b></td><td><b>61.1</b></td><td><b>80.3</b></td></tr>
+</tbody>
+</table>
 
 > Across multiple independent runs, DarkCORE achieves an average mAP of **80.1 ± 0.18** on ExDark.
 
 ### UG2+ DarkFace (mAP50 %, YOLOv3 detector)
 
-| Type | Method | mAP50 |
-|---|---|---|
-| Baseline | YOLOv3 | 48.3 |
-| Two-stage | MBLLEN + YOLOv3 | 51.6 |
-| Two-stage | KinD + YOLOv3 | 51.6 |
-| Two-stage | Zero-DCE + YOLOv3 | 54.2 |
-| Two-stage | Retinexformer + YOLOv3 | <ins>57.4</ins> |
-| Two-stage | PairLIE + YOLOv3 | 55.4 |
-| Two-stage | HVI + YOLOv3 | 57.0 |
-| Single-stage | MAET | 55.8 |
-| Single-stage | IAT | 53.1 |
-| Single-stage | DENet | 51.2 |
-| Single-stage | PE-YOLO | 51.1 |
-| Single-stage | DAI-Net | 57.0 |
-| Single-stage | EMV-YOLO | 57.6 |
-| Single-stage | **DarkCORE (ours)** | **58.2** |
+<table>
+<thead>
+<tr><th>Type</th><th>Method</th><th>mAP50</th></tr>
+</thead>
+<tbody>
+<tr><td>Baseline</td><td>YOLOv3</td><td>48.3</td></tr>
+<tr><td rowspan="6">Two-stage</td><td>MBLLEN + YOLOv3</td><td>51.6</td></tr>
+<tr><td>KinD + YOLOv3</td><td>51.6</td></tr>
+<tr><td>Zero-DCE + YOLOv3</td><td>54.2</td></tr>
+<tr><td>Retinexformer + YOLOv3</td><td><ins>57.4</ins></td></tr>
+<tr><td>PairLIE + YOLOv3</td><td>55.4</td></tr>
+<tr><td>HVI + YOLOv3</td><td>57.0</td></tr>
+<tr><td rowspan="7">Single-stage</td><td>MAET</td><td>55.8</td></tr>
+<tr><td>IAT</td><td>53.1</td></tr>
+<tr><td>DENet</td><td>51.2</td></tr>
+<tr><td>PE-YOLO</td><td>51.1</td></tr>
+<tr><td>DAI-Net</td><td>57.0</td></tr>
+<tr><td>EMV-YOLO</td><td>57.6</td></tr>
+<tr><td><b>DarkCORE (ours)</b></td><td><b>58.2</b></td></tr>
+</tbody>
+</table>
 
 > Average over multiple runs: **57.8 ± 0.4**.
 
