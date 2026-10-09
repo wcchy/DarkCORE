@@ -19,11 +19,11 @@ Object detectors trained on high-quality datasets often suffer severe performanc
 - **Object-Oriented Feature Enhancement (RE-Net & IE-Net):** Two lightweight networks enhance object-oriented features in the latent feature space for both reflectance (RE-Net) and illumination (IE-Net), enabling end-to-end joint optimization with the detector.
 - **Extremely lightweight:** only **20K** additional parameters, making it a plug-and-play enhancement module suitable for resource-constrained edge devices and real-time applications.
 
-![DarkCORE Framework](assets/framework.png)
-
 <p align="center">
-<img src="assets/teaser_diff.png" width="520"><br>
-<em>Enhancement differences w.r.t. the original image (white regions = enhanced areas). Compared with PairLIE and EMV-YOLO, DarkCORE more effectively suppresses noise and enhances object-relevant features.</em>
+<img src="assets/framework.png" width="63%" align="middle">
+&nbsp;
+<img src="assets/teaser_diff.png" width="33%" align="middle"><br>
+<em>Left: overview of the DarkCORE framework. Right: enhancement differences w.r.t. the original image (white regions = enhanced areas) — compared with PairLIE and EMV-YOLO, DarkCORE more effectively suppresses noise and enhances object-relevant features.</em>
 </p>
 
 ## ✨ Highlights
