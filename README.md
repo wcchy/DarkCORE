@@ -21,6 +21,11 @@ Object detectors trained on high-quality datasets often suffer severe performanc
 
 ![DarkCORE Framework](assets/framework.png)
 
+<p align="center">
+<img src="assets/teaser_diff.png" width="520"><br>
+<em>Enhancement differences w.r.t. the original image (white regions = enhanced areas). Compared with PairLIE and EMV-YOLO, DarkCORE more effectively suppresses noise and enhances object-relevant features.</em>
+</p>
+
 ## ✨ Highlights
 
 - 🔦 Multi-branch collaborative self-supervised denoising explicitly addresses the limitations of single-branch denoising in low-light detection.
